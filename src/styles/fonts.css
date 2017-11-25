@@ -1,0 +1,38 @@
+@font-face {
+  font-family: 'yta';
+  src:  url('../fonts/yta.eot?bas7ys');
+  src:  url('../fonts/yta.eot?bas7ys#iefix') format('embedded-opentype'),
+    url('../fonts/yta.ttf?bas7ys') format('truetype'),
+    url('../fonts/yta.woff?bas7ys') format('woff'),
+    url('../fonts/yta.svg?bas7ys#yta') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="yta-"], [class*=" yta-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'yta' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.yta-menu_icon:before {
+  content: "\e900";
+  color: #fff;
+}
+.yta-slide_icon-up-down:before {
+  content: "\e901";
+  color: #fff;
+}
+.yta-yta_icon-white:before {
+  content: "\e902";
+  color: #fff;
+}
