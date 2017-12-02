@@ -46,3 +46,16 @@
   content: "\e902";
   color: #fff;
 }
+.yta-JT_logo:before {
+  content: "\e906";
+  color: #432245;
+}
+.yta-KOC_logo:before {
+  content: "\e907";
+}
+.yta-qu_01:before {
+  content: "\e908";
+}
+.yta-qu_02:before {
+  content: "\e909";
+}
