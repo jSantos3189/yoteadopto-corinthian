@@ -19,10 +19,13 @@ $font_extensions: (
 );
 
 $color_purple: #553457;
+$color_red: #f06252;
+$section_padding: 4em;
+$title_size: 2.5em;
 
 $mq-breakpoints: (
     mobile:  320px,
     tablet:  740px,
     desktop: 980px,
-    wide:    1300px
+    wide:    1800px
 );

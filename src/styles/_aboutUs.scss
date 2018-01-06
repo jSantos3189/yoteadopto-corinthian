@@ -1,0 +1,105 @@
+$left_space: 20em;
+
+.aboutUs {
+  position: relative;
+  overflow: hidden;
+  padding: $section_padding;
+  background-color: $color_red;
+
+  @include mq($from: tablet){
+    padding-left: $left_space + $section_padding;
+    &::before{
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: $left_space;
+      background-image: url('../img/aboutus_bg.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+  }
+
+  @include mq($from: desktop, $until: wide){
+    &::before{
+      background-attachment: fixed;
+      background-position-x: -25em;
+    }
+  }
+
+  &__containerImg{
+    text-align: center;
+
+    &__img {
+      position: relative;
+      display: inline-block;
+
+      @include mq($from: tablet){
+        img {
+          height: 25em;
+        }
+      }
+
+      &__isologo {
+        position: absolute;
+        width: 6.25em;
+        height: 6.25em;
+        bottom: 0;
+        right: 0;
+      }
+    }
+  }
+
+  &__title {
+    color: $color_purple;
+    font-size: $title_size;
+    text-align: center;
+    margin: 1em 0 0.5em;
+  }
+
+  &__desc {
+    color: #fff;
+  }
+
+  &__pawPrint {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: -1;
+    opacity: 0.1;
+
+    @include mq($from: tablet){
+      left: $left_space;
+    }
+  }
+
+  @keyframes dog-barking-animation {
+    from {
+      right: 8.5em;
+      transform: scale(0);
+    }
+    to {
+      right: 7.5em;
+      transform: scale(1);
+    }
+  }
+
+  &__bark {
+    display: none;
+    position: absolute;
+    top: 2em;
+    right: 7.5em;
+    transform-origin: left;
+    animation-name: dog-barking-animation;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+
+    @include mq($from: tablet){
+      display: block;
+    }
+  }
+
+}

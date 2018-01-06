@@ -279,6 +279,115 @@ table {
   }
 }
 
+.aboutUs {
+  position: relative;
+  overflow: hidden;
+  padding: 4em;
+  background-color: #f06252;
+}
+
+@media (min-width: 46.25em) {
+  .aboutUs {
+    padding-left: 24em;
+  }
+  .aboutUs::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 20em;
+    background-image: url("../img/aboutus_bg.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@media (min-width: 61.25em) and (max-width: 112.49em) {
+  .aboutUs::before {
+    background-attachment: fixed;
+    background-position-x: -25em;
+  }
+}
+
+.aboutUs__containerImg {
+  text-align: center;
+}
+
+.aboutUs__containerImg__img {
+  position: relative;
+  display: inline-block;
+}
+
+@media (min-width: 46.25em) {
+  .aboutUs__containerImg__img img {
+    height: 25em;
+  }
+}
+
+.aboutUs__containerImg__img__isologo {
+  position: absolute;
+  width: 6.25em;
+  height: 6.25em;
+  bottom: 0;
+  right: 0;
+}
+
+.aboutUs__title {
+  color: #553457;
+  font-size: 2.5em;
+  text-align: center;
+  margin: 1em 0 0.5em;
+}
+
+.aboutUs__desc {
+  color: #fff;
+}
+
+.aboutUs__pawPrint {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: -1;
+  opacity: 0.1;
+}
+
+@media (min-width: 46.25em) {
+  .aboutUs__pawPrint {
+    left: 20em;
+  }
+}
+
+@keyframes dog-barking-animation {
+  from {
+    right: 8.5em;
+    transform: scale(0);
+  }
+  to {
+    right: 7.5em;
+    transform: scale(1);
+  }
+}
+
+.aboutUs__bark {
+  display: none;
+  position: absolute;
+  top: 2em;
+  right: 7.5em;
+  transform-origin: left;
+  animation-name: dog-barking-animation;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+
+@media (min-width: 46.25em) {
+  .aboutUs__bark {
+    display: block;
+  }
+}
+
 *, a {
   font-family: nunito;
 }
@@ -304,38 +413,6 @@ p {
 section, footer {
   position: relative;
   z-index: 2;
-}
-
-.aboutUs {
-  background-color: #f06252;
-  padding: 40px;
-}
-
-.aboutUs-containerImg {
-  text-align: center;
-}
-
-.aboutUs-img {
-  position: relative;
-}
-
-.aboutUs-isologo {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  bottom: 0;
-  right: 0;
-}
-
-.aboutUs-title {
-  color: #553457;
-  font-size: 32px;
-  text-align: center;
-  margin: 14px 0 5px;
-}
-
-.aboutUs-desc {
-  color: #fff;
 }
 
 .adopt-title,

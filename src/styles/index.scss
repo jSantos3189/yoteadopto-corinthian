@@ -5,6 +5,7 @@
 @import '_fonts';
 @import '_header';
 @import '_home';
+@import '_aboutUs';
 
   *, a {
     font-family: nunito;
@@ -31,38 +32,6 @@
   section, footer {
     position: relative;
     z-index: 2;
-  }
-
-  .aboutUs {
-    background-color: #f06252;
-    padding: 40px;
-  }
-
-  .aboutUs-containerImg {
-    text-align: center;
-  }
-
-  .aboutUs-img {
-    position: relative;
-  }
-
-  .aboutUs-isologo {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    bottom: 0;
-    right: 0;
-  }
-
-  .aboutUs-title {
-    color: #553457;
-    font-size: 32px;
-    text-align: center;
-    margin: 14px 0 5px;
-  }
-
-  .aboutUs-desc {
-    color: #fff;
   }
 
   .adopt-title,
