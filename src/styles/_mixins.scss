@@ -1,0 +1,10 @@
+@mixin build-fonts($font_family, $name, $weight: normal) {
+  font-family: $font_family;
+  src: url('../fonts/#{$name}.eot');
+  src: url('../fonts/#{$name}.eot') format('embedded-opentype'),
+  url('../fonts/#{$name}.ttf') format('truetype'),
+  url('../fonts/#{$name}.woff') format('woff'),
+  url('../fonts/#{$name}.svg') format('svg');
+  font-weight: $weight;
+  font-style: normal;
+}
