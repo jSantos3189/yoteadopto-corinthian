@@ -36,12 +36,17 @@
   </header>
   <main>
     <section id="home" class="home">
-      <svg aria-labelledby="home-title home-desc">
+      <video autoplay loop class="home__video">
+        <source src="./videos/puppiness.mp4" type="video/mp4">
+        <source src="./videos/puppiness.webm" type="video/webm">
+        <source src="./videos/puppiness.ogv" type="video/ogv">
+      </video>
+      <svg class="home__logo" aria-labelledby="home-title home-desc">
         <title id="home-title">Yo te adopto</title>
         <desc id="home-desc">Hogares para nuestros amigos</desc>
         <image xlink:href="./img/isologo.svg" width="100%" height: "100%"></image>
       </svg>
-      <i class="home-down yta yta-slide_icon-up-down"></i>
+      <i class="home__down yta yta-slide_icon-up-down"></i>
     </section>
 
     <section id="aboutUs" class="aboutUs">

@@ -157,7 +157,7 @@ table {
   left: 0;
   right: 0;
   padding: 1.24em 1em;
-  z-index: 1;
+  z-index: 3;
 }
 
 .header .header__nav__menuIcon, .header .header__nav__faceIcon {
@@ -228,6 +228,57 @@ table {
   text-transform: uppercase;
 }
 
+.home {
+  background-image: url("../img/bg-home_320.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 31.25em;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+@media (min-width: 61.25em) {
+  .home {
+    background-image: url("../img/puppiness.jpg");
+  }
+}
+
+.home__video {
+  display: none;
+}
+
+@media (min-width: 61.25em) {
+  .home__video {
+    display: block;
+    position: fixed;
+    height: auto;
+    min-height: 100%;
+    min-width: 100%;
+    z-index: 1;
+  }
+}
+
+.home__logo {
+  width: 11.25em;
+  height: 11.25em;
+}
+
+.home__down {
+  position: absolute;
+  bottom: 1em;
+  font-size: 1.5em;
+}
+
+@media (min-width: 61.25em) {
+  .home__logo, .home__down {
+    display: none;
+  }
+}
+
 *, a {
   font-family: nunito;
 }
@@ -250,28 +301,9 @@ p {
   line-height: 1.3;
 }
 
-.home {
-  background-image: url("../img/bg-home_320.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 500px;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+section, footer {
   position: relative;
-}
-
-.home svg {
-  width: 180px;
-  height: 180px;
-}
-
-.home-down {
-  position: absolute;
-  bottom: 40px;
-  font-size: 40px;
+  z-index: 2;
 }
 
 .aboutUs {

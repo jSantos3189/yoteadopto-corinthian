@@ -4,6 +4,7 @@
 @import '_mixins';
 @import '_fonts';
 @import '_header';
+@import '_home';
 
   *, a {
     font-family: nunito;
@@ -27,28 +28,9 @@
     line-height: 1.3;
   }
 
-  .home {
-    background-image: url('../img/bg-home_320.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 500px;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  section, footer {
     position: relative;
-  }
-
-  .home svg {
-    width: 180px;
-    height: 180px;
-  }
-
-  .home-down {
-    position: absolute;
-    bottom: 40px;
-    font-size: 40px;
+    z-index: 2;
   }
 
   .aboutUs {
