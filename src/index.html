@@ -8,30 +8,30 @@
 </head>
 <link rel="stylesheet" href="./styles/index.css">
 <body>
-  <header>
-    <nav>
-      <i id="menuIcon" class="yta yta-menu_icon"></i>
+  <header class="header">
+    <nav class="header__nav">
+      <i id="menuIcon" class="header__nav__menuIcon yta yta-menu_icon"></i>
       <h2 class="only-read">Menú de Navegación</h2>
-      <ul id="menuList" class="menu-list">
+      <ul id="menuList" class="header__nav__menuList menu-list">
         <li>
-          <a href="#home">Home</a>
+          <a class="header__nav__menuList__link" href="#home">Home</a>
         </li>
         <li>
-          <a href="#aboutUs">
+          <a class="header__nav__menuList__link" href="#aboutUs">
             <span class="only-read">¿Que es Yo Te Adopto?</span>Acerca</a>
         </li>
         <li>
-          <a href="#adopt">
+          <a class="header__nav__menuList__link" href="#adopt">
             <span class="only-read">Animales en Adopción</span>Adoptar</a>
         </li>
         <li>
-            <a href="#testimony">Testimonio</a>
-          </li>
+          <a class="header__nav__menuList__link" href="#testimony">Testimonio</a>
+        </li>
         <li>
-          <a href="#camp">Campañas</a>
+          <a class="header__nav__menuList__link" href="#camp">Campañas</a>
         </li>
       </ul>
-      <i class="yta yta-yta_icon-white"></i>
+      <i class="header__nav__faceIcon yta yta-yta_icon-white"></i>
     </nav>
   </header>
   <main>
@@ -170,12 +170,13 @@
   </main>
 
   <script>
-      var menulist = document.getElementById('menuList');
+      var menuList = document.getElementById('menuList');
       var menuIcon = document.getElementById('menuIcon');
+      var menuListClassOpened = "header__nav__menuList--opened";
 
       menuIcon.addEventListener('click', function(){
-        menulist.classList.toggle('opened');
-        if(menulist.classList.contains('opened')){
+        menuList.classList.toggle(menuListClassOpened);
+        if(menuList.classList.contains(menuListClassOpened)){
           document.body.style.overflow = 'hidden';
         }else {
           document.body.style.overflow = 'auto';
@@ -185,7 +186,6 @@
      window.onhashchange = function(){
        menuIcon.click();
      }
-
   </script>
 </body>
 </html>

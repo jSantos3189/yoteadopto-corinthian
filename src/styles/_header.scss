@@ -1,0 +1,54 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 16px;
+  z-index: 1;
+
+  %nav-icon {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__nav {
+    &__menuIcon {
+      font-size: 20px;
+      cursor: pointer;
+      @extend %nav-icon;
+    }
+
+    &__faceIcon {
+      font-size: 26px;
+      float: right;
+      @extend %nav-icon;
+    }
+
+    &__menuList {
+      position: fixed;
+      background-color: $color_purple;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 100%;
+      overflow: hidden;
+      text-align: center;
+      transition: bottom ease .5s, padding-top ease-in .3s;
+
+      &--opened {
+        padding-top: 66px;
+        bottom: 0;
+        height: 100vh;
+      }
+
+      &__link {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        padding: 30px;
+        text-transform: uppercase;
+      }
+
+    }
+  }
+}
