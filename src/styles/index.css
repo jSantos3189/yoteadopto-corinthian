@@ -156,7 +156,7 @@ table {
   top: 0;
   left: 0;
   right: 0;
-  padding: 20px 16px;
+  padding: 1.24em 1em;
   z-index: 1;
 }
 
@@ -166,13 +166,25 @@ table {
 }
 
 .header__nav__menuIcon {
-  font-size: 20px;
+  font-size: 1.5em;
   cursor: pointer;
 }
 
+@media (min-width: 61.25em) {
+  .header__nav__menuIcon {
+    display: none;
+  }
+}
+
 .header__nav__faceIcon {
-  font-size: 26px;
+  font-size: 1.5em;
   float: right;
+}
+
+@media (min-width: 61.25em) {
+  .header__nav__faceIcon {
+    display: none;
+  }
 }
 
 .header__nav__menuList {
@@ -187,17 +199,32 @@ table {
   transition: bottom ease .5s, padding-top ease-in .3s;
 }
 
+@media (min-width: 61.25em) {
+  .header__nav__menuList {
+    bottom: auto;
+    background-color: transparent;
+    transition: background-color ease-out .3s;
+  }
+  .header__nav__menuList li {
+    display: inline-block;
+  }
+}
+
 .header__nav__menuList--opened {
-  padding-top: 66px;
+  padding-top: 4.125em;
   bottom: 0;
   height: 100vh;
+}
+
+.header__nav__menuList--scrolled {
+  background-color: #553457;
 }
 
 .header__nav__menuList__link {
   color: #fff;
   text-decoration: none;
   display: block;
-  padding: 30px;
+  padding: 2em;
   text-transform: uppercase;
 }
 

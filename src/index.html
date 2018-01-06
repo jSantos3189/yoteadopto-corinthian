@@ -173,19 +173,43 @@
       var menuList = document.getElementById('menuList');
       var menuIcon = document.getElementById('menuIcon');
       var menuListClassOpened = "header__nav__menuList--opened";
+      var menuListClassScrolled = "header__nav__menuList--scrolled";
 
       menuIcon.addEventListener('click', function(){
-        menuList.classList.toggle(menuListClassOpened);
-        if(menuList.classList.contains(menuListClassOpened)){
-          document.body.style.overflow = 'hidden';
-        }else {
-          document.body.style.overflow = 'auto';
+        if(window.innerWidth < 980){
+          menuList.classList.toggle(menuListClassOpened);
+          if(menuList.classList.contains(menuListClassOpened)){
+            document.body.style.overflow = 'hidden';
+          } else {
+            document.body.style.overflow = 'auto';
+          }
+        } else {
+          var hash = location.hash;
+          section = hash.replace('#', '');
+          section = document.getElementById(section);
+          window.scrollTo(0, section.offsetTop - menuList.offsetHeight);
         }
       });
 
      window.onhashchange = function(){
        menuIcon.click();
      }
+
+     window.addEventListener('scroll', function(){
+       if(window.innerWidth > 980){
+         if(window.scrollY > 20){
+            menuList.classList.add(menuListClassScrolled);
+         } else {
+            menuList.classList.remove(menuListClassScrolled);
+         }
+       }
+     });
+
+     window.addEventListener('resize', function(){
+      menuList.className = 'header__nav__menuList';
+      document.body.style.overflow = 'auto';
+     });
+
   </script>
 </body>
 </html>
